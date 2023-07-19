@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px;
+    background-color: white;
+}
+
+header .logo {
+    font-size: 2rem;
+}
+
+header a i {
+    text-decoration: none;
+    color: #434343;
+    font-size: 2rem;
+}
+
+.mobile-hidden {
+    display: none;
+}
