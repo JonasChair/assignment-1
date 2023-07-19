@@ -1,8 +1,12 @@
-body {
-    margin: 0;
+body{
+    min-width: 360px;
 }
 
+body,
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,7 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 20px 10px;
+    padding: 20px 10px 10px;
     background-color: white;
 }
 
@@ -24,6 +28,102 @@ header a i {
     font-size: 2rem;
 }
 
+main {
+    background-color: #F9F9F9;
+    padding: 30px 10px;
+    width: 100%;
+}
+
+button{
+    all:unset;
+    background-color: #2A8BED;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+button img{
+    height: 25px;
+    width: 25px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-section-title {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.news-section-title h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 450;
+    max-width: 300px;
+}
+
+.news-section-arrow {
+    height: 50px;
+}
+
+.news-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.news-card {
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
 .mobile-hidden {
     display: none;
+}
+
+.news-card-img{
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.news-cards > :nth-child(1) > .news-card-img {
+    background-image: url("https://picsum.photos/id/155/3264/2176");
+}
+
+.news-cards > :nth-child(3) > .news-card-img {
+    background-image: url("https://picsum.photos/id/134/4928/3264");
+}
+
+.news-cards > :nth-child(4) > .news-card-img {
+    background-image: url("https://picsum.photos/id/182/2896/1944");
+}
+
+.news-card-text{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.news-card-text h3{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.news-card-text span{
+    color: #7E7B7C;
+    font-size: 0.75rem;
 }
