@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 360px;
 }
@@ -55,6 +59,7 @@ button img {
 section {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     padding-bottom: 50px;
 }
 
@@ -162,16 +167,16 @@ section {
     cursor: pointer;
 }
 
-.publication-card:nth-of-type(2n){
+.publication-card:nth-of-type(2n) {
     background-color: black;
 }
 
-.publication-card h3{
+.publication-card h3 {
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.publication-card-bottom{
+.publication-card-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -187,14 +192,19 @@ section {
     display: none;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
     .mobile-hidden {
         display: block;
     }
 
-    header{
-        padding-top:5px;
+    button {
+        width: 250px;
+        align-self: center;
+    }
+
+    header {
+        padding-top: 5px;
         padding-bottom: 5px;
     }
 
@@ -205,14 +215,91 @@ section {
         font-size: 0.75rem;
         text-transform: uppercase;
     }
+
     a {
         text-decoration: none;
         color: #434343;
     }
-    .page-controls{
+
+    section {
+        gap: 40px;
+    }
+
+    .page-controls {
         display: flex;
         gap: 30px;
     }
 
+    .scroll-control {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-style: italic;
+    }
 
+    .news-section-title h1 {
+        font-size: 5rem;
+        position: relative;
+        transform: translateX(-25%);
+    }
+
+    .news-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-card {
+        flex-direction: row;
+    }
+
+    .news-card h3 {
+        font-size: 1rem;
+    }
+
+    .news-card h2 {
+        padding-bottom: 20px;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .news-card-text {
+        flex-direction: column-reverse;
+        height: 100%;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .news-card-img {
+        min-width: 120px;
+        max-width: 120px;
+        height: 200px;
+    }
+
+    .publication-section-title {
+        align-self: center;
+        position: relative;
+        transform: translateX(-25%);
+    }
+
+    .publication-section-title h2 {
+        font-size: 3rem;
+    }
+
+    .publication-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    section{
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .news-card-img {
+        min-width: 250px;
+        max-width: 250px;
+    }
 }
