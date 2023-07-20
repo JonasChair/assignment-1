@@ -1,4 +1,4 @@
-body{
+body {
     min-width: 360px;
 }
 
@@ -8,6 +8,7 @@ body,
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    user-select: none;
 }
 
 header {
@@ -34,8 +35,8 @@ main {
     width: 100%;
 }
 
-button{
-    all:unset;
+button {
+    all: unset;
     background-color: #2A8BED;
     color: white;
     display: flex;
@@ -43,9 +44,10 @@ button{
     justify-content: space-between;
     font-size: 1.3rem;
     padding: 10px;
+    cursor: pointer;
 }
 
-button img{
+button img {
     height: 25px;
     width: 25px;
 }
@@ -53,6 +55,7 @@ button img{
 section {
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 .news-section-title {
@@ -76,7 +79,7 @@ section {
 .news-cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 
 .news-card {
@@ -86,44 +89,130 @@ section {
     gap: 15px;
     padding: 10px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 
-.mobile-hidden {
-    display: none;
-}
-
-.news-card-img{
+.news-card-img {
     width: 100%;
     height: 200px;
     background-position: center;
     background-size: cover;
 }
 
-.news-cards > :nth-child(1) > .news-card-img {
+.news-cards> :nth-child(1)>.news-card-img {
     background-image: url("https://picsum.photos/id/155/3264/2176");
 }
 
-.news-cards > :nth-child(3) > .news-card-img {
+.news-cards> :nth-child(3)>.news-card-img {
     background-image: url("https://picsum.photos/id/134/4928/3264");
 }
 
-.news-cards > :nth-child(4) > .news-card-img {
+.news-cards> :nth-child(4)>.news-card-img {
     background-image: url("https://picsum.photos/id/182/2896/1944");
 }
 
-.news-card-text{
+.news-card-text {
     flex-direction: column;
     display: flex;
     justify-content: space-between;
     height: 100px;
 }
 
-.news-card-text h3{
+.news-card-text h3 {
     font-weight: 400;
     font-size: 1.3rem;
 }
 
-.news-card-text span{
+.news-card-text span {
     color: #7E7B7C;
     font-size: 0.75rem;
+}
+
+.publication-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px 0px;
+}
+
+.publication-section-title h2 {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 450;
+    max-width: 300px;
+}
+
+.publication-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.publication-card {
+    background-color: #2A8BED;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 300px;
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.publication-card:nth-of-type(2n){
+    background-color: black;
+}
+
+.publication-card h3{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.publication-card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.publication-card-bottom img {
+    height: 25px;
+    width: 25px;
+}
+
+.mobile-hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+
+    .mobile-hidden {
+        display: block;
+    }
+
+    header{
+        padding-top:5px;
+        padding-bottom: 5px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+    a {
+        text-decoration: none;
+        color: #434343;
+    }
+    .page-controls{
+        display: flex;
+        gap: 30px;
+    }
+
+
 }
