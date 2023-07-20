@@ -16,6 +16,9 @@ body,
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -190,6 +193,10 @@ section {
 
 .mobile-hidden {
     display: none;
+}
+
+a:hover{
+    text-shadow: 1px 1px 10px #434343;
 }
 
 @media screen and (min-width: 768px) {
